@@ -1,0 +1,31 @@
+<div id="settings-box">
+
+    <div class="settings-title">Fiókom szerkesztése</div>
+
+    <div id="settings">
+        <form>
+            <div>
+                <label>EMAIL MEGVÁLTOZTATÁSA:</label>
+                <input type="text" class="text-input" name="email" value="{{email}}" #_email />
+            </div>
+            <div>
+                <label>KERESZTNÉV MEGVÁLTOZTATÁSA:</label>
+                <input type="text" class="text-input" name="firstname" value="{{firstname}}" #_firstname/>
+            </div>
+            <div>
+                <label>VEZETÉKNÉV MEGVÁLTOZTATÁSA:</label>
+                <input type="text" class="text-input" name="lastname" value="{{lastname}}" #_lastname/>
+            </div>
+            <div class="btn" fxLayoutAlign="center center"><button (click)="$event.preventDefault(); updateUser(_email.value, _firstname.value, _lastname.value)">Mentés</button></div>
+            <div>
+                <label>JELSZÓ MEGVÁLTOZTATÁSA:</label>
+                <input type="password" class="text-input" name="pw" #pw/>
+            </div> 
+            <div fxLayoutAlign="center center"><button (click)="updateUserPassword(pw.value)">Mentés</button></div>
+        </form>
+        <a class="secondary-btn">Fiók törlése</a>
+        <footer id="main-footer">
+            <p>Szőke Xavér & Péter Roland &copy; 2019, Telekocsi</p>
+        </footer>
+    </div>
+</div>

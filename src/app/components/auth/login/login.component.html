@@ -1,0 +1,23 @@
+<div id="login-box">
+    <div id="login">
+        <div class="logo">
+            <img src="assets/img/parking.svg" alt="Logo" height="60"/>
+        </div>
+        <form>
+            <div>
+                <label>Email</label>
+                <input type="text" class="text-input" name="email" #email>
+            </div>
+            <div>
+                <label>Jelszó</label>
+                <input type="password" class="text-input" name="pw" #password/>
+            </div>
+            <button (click)="login(email.value, password.value)" class="primary-btn">Bejelentkezés</button>
+        </form>
+        
+        <a (click)="showRegister()" class="secondary-btn">Regisztrálás</a>
+    </div>
+<footer id="main-footer">
+        <p>Szőke Xavér & Péter Roland &copy; 2019, Telekocsi</p>
+</footer>
+</div>

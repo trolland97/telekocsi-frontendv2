@@ -1,0 +1,59 @@
+#routes-box{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.routes-title {
+    font-size: 20pt;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    color: white;
+    margin-top: 25px;
+  }
+
+.search {
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 50px;
+  }
+
+label {
+     display: inline-block;
+     width: 120px;
+     font-size: 20px;;
+     color: white;
+     margin-top: 10px;
+  }
+
+#form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    margin-top: 30px;
+  }
+
+#main-footer {
+    color: #ccc;
+    text-align: center;
+    font-size: 0.8rem;
+    max-width: 80%;
+    padding-top: 5rem;
+  }
+  
+#main-footer a {
+    color: #f96816;
+    text-decoration: underline;
+  }
+

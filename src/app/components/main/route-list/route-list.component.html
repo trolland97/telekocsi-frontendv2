@@ -1,0 +1,104 @@
+<div id="route-list-box">
+
+  <div class="routes-title">Általam meghirdetett utak</div>
+  <table style="width:100%">
+    <tr>
+      <th>Sofőr:</th>
+      <th>Honnan:</th>
+      <th>Hova:</th> 
+      <th>Időpont:</th>
+      <th>Ár:</th>
+      <th>Max férőhely:</th>
+      <th>Férőhely</th>
+      <th>Utasok:</th>
+      <th>Törlés:</th>
+    </tr>
+    <tr *ngFor="let route of (myRoutes$ | async)">
+      <td>{{route.driver.firstname + " " + route.driver.lastname}}</td>
+      <td>{{route.from}}</td>
+      <td>{{route.where}}</td>
+      <td>{{route.when}}</td>
+      <td>{{route.price}} HUF</td>
+      <td>{{route.maxPassengers}}</td>
+      <td>{{route.maxPassengers - route.passengers.length}}</td>
+      <td>
+        <ul>
+          <li *ngFor="let passenger of route.passengers">
+            {{passenger.firstname + " " + passenger.lastname}}
+          </li>
+        </ul>
+    </td>
+    <td><div fxLayoutAlign="center center"><button (click)="deleteRoute(route.id)">Törlés</button></div></td>
+    </tr>
+  </table>
+  
+  <div class="routes-title">Általam jelentkezett utak</div>
+  <table style="width:100%">
+    <tr>
+      <th>Sofőr:</th>
+      <th>Honnan:</th>
+      <th>Hova:</th> 
+      <th>Időpont:</th>
+      <th>Ár:</th>
+      <th>Max férőhely:</th>
+      <th>Férőhely</th>
+      <th>Utasok:</th>
+      <th>Törlés:</th>
+    </tr>
+    <tr *ngFor="let route of (signedRoutes$ | async)">
+      <td>{{route.driver.firstname + " " + route.driver.lastname}}</td>
+      <td>{{route.from}}</td>
+      <td>{{route.where}}</td>
+      <td>{{route.when}}</td>
+      <td>{{route.price}} HUF</td>
+      <td>{{route.maxPassengers}}</td>
+      <td>{{route.maxPassengers - route.passengers.length}}</td>
+      <td>
+        <ul>
+          <li *ngFor="let passenger of route.passengers">
+            {{passenger.firstname + " " + passenger.lastname}}
+          </li>
+        </ul>
+    </td>
+    <td><div fxLayoutAlign="center center"><button (click)="signOffRoute(route.id)">Lejelentkezés</button></div></td>
+    </tr>
+  </table>
+  
+  <div class="routes-title">Meghirdetett utak</div>
+  
+    <table style="width:100%">
+        <tr>
+          <th>Sofőr:</th>
+          <th>Honnan:</th>
+          <th>Hova:</th> 
+          <th>Időpont:</th>
+          <th>Ár:</th>
+          <th>Max férőhely:</th>
+          <th>Férőhely</th>
+          <th>Utasok:</th>
+          <th>Jelentkezés:</th>
+        </tr>
+        <tr *ngFor="let route of (routes$ | async)">
+          <td>{{route.driver.firstname + " " + route.driver.lastname}}</td>
+          <td>{{route.from}}</td>
+          <td>{{route.where}}</td>
+          <td>{{route.when}}</td>
+          <td>{{route.price}} HUF</td>
+          <td>{{route.maxPassengers}}</td>
+          <td>{{route.maxPassengers - route.passengers.length}}</td>
+          <td>
+              <ul>
+                <li *ngFor="let passenger of route.passengers">
+                  {{passenger.firstname + " " + passenger.lastname}}
+                </li>
+              </ul>
+          </td>
+          <td><div fxLayoutAlign="center center"><button (click)="signToRoute(route)">Jelentkezem</button></div></td>
+        </tr>
+      </table>
+  
+  
+  <footer id="main-footer">
+    <p>Szőke Xavér & Péter Roland &copy; 2019, Telekocsi</p>
+  </footer>
+  </div>

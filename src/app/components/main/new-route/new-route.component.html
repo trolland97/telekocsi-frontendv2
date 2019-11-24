@@ -1,0 +1,26 @@
+<div id="routes-box">
+
+  <div class="routes-title">Fuvar hirdetés</div>
+  
+  <div id="form">
+    <form action="/action_page.php">
+      <label for="text">Honnan:</label>
+      <input type="text" name="from" #from><br>
+      <label for="text">Hova:</label>
+      <input type="text" name="hova" #where><br>
+      <label for="datetime-local">Időpont:</label>
+      <input type="datetime-local" name="when" #when><br>
+      <label for="quantity">Férőhely:</label>
+      <input type="number" name="quantity" min="1" max="10" #maxPassengers><br>
+      <label for="price">Ár:</label>
+      <input type="number" name="price" #price><br>
+    </form>
+  
+  </div>
+  
+  <div class="search"><button (click)="newRoute(from.value, where.value, when.value, maxPassengers.value, price.value)">Meghirdet</button></div>
+  
+  <footer id="main-footer">
+    <p>Szőke Xavér & Péter Roland &copy; 2019, Telekocsi</p>
+  </footer>
+  </div>

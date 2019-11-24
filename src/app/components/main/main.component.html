@@ -1,0 +1,10 @@
+<ul>
+  <li (click)="showRoutes()">Meghirdetett utak</li>
+  <li (click)="showAdvertising()">Fuvar hirdetés</li>
+  <li (click)="showProfileSettings()">Fiók szerkesztés</li>
+  <li style="float:right" (click)="logout()">Kijelentkezés</li>
+</ul>
+
+<app-new-route *ngIf="advertising"></app-new-route>
+<app-route-list *ngIf="routes"></app-route-list>
+<app-profile-settings *ngIf="profilesettings"></app-profile-settings>

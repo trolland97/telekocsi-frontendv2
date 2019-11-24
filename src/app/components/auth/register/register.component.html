@@ -1,0 +1,31 @@
+<div id="register-box">
+    <div id="register">
+        <form>
+            <div>
+                <label>Vezetéknév</label>
+                <input type="text" class="text-input" name="firstname" #firstname/>
+            </div>
+            <div>
+                <label>Keresztnév</label>
+                <input type="text" class="text-input" name="lastname" #lastname/>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="text" class="text-input" name="email" #email/>
+            </div>
+            <div>
+                <label>Jelszó</label>
+                <input type="password" class="text-input" name="pw" #pw/>
+            </div>
+            <div>
+                <label>Jelszó újra</label>
+                <input type="password" class="text-input" name="re-pw" #pwr/>
+            </div>
+            <button (click)="register(firstname.value, lastname.value, email.value, pw.value, pwr.value)" type="submit" class="primary-btn">Regisztráció</button>
+        </form>
+        <a (click)="showLogin()" class="secondary-btn">Vissza</a>
+        <footer id="main-footer">
+            <p>Szőke Xavér & Péter Roland &copy; 2019, Telekocsi</p>
+        </footer>
+    </div>
+</div>
