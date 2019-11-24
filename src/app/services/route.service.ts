@@ -8,7 +8,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class RouteService {
 
-  private url = "http://localhost:8080/api/routes";
+  private url = "https://telekocsi-v2.herokuapp.com/api/routes";
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) {

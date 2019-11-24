@@ -7,7 +7,7 @@ import { IUser } from '../models/user.model';
 })
 export class UserService {
 
-  private url = "http://localhost:8080/api/users";
+  private url = "https://telekocsi-v2.herokuapp.com/api/users";
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) {

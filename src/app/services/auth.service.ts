@@ -8,8 +8,8 @@ import { IUser } from '../models/user.model';
 })
 export class AuthService {
 
-  url: string = "http://localhost:8080/auth"
-  updateUrl: string = "http://localhost:8080/api/users"
+  url: string = "https://telekocsi-v2.herokuapp.com/auth"
+  updateUrl: string = "https://telekocsi-v2.herokuapp.com/api/users"
 
   constructor(private http: HttpClient) { }
   
